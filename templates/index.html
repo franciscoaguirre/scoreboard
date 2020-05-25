@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Scoreboard!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+  </head>
+
+  <body>
+    <div class="center">
+      <h1>Scoreboard</h1>
+      {% for score in scores %}
+      <div>
+        <h2>{{ score.player_1 }}: {{ score.score_1 }} - {{ score.score_2 }} :{{ score.player_2 }}</h2>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
